@@ -1,12 +1,19 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {LoginComponent} from './views/login/login.component';
+import {PublicRoutesModule} from './routes/public-routes.module';
+import {InputComponent} from '../../shared/components/input/input.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    LoginComponent
+  ],
   imports: [
-    CommonModule
+    PublicRoutesModule,
+    CommonModule,
+    InputComponent
   ]
 })
-export class PublicModule { }
+export class PublicModule {
+}

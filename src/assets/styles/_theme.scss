@@ -7,4 +7,9 @@ $pure_white_tligth: #FFFFFFFF;
 
 body.light {
   --ca-text-color: #{$pure_white_tligth};
+  --ca-background: #{$dark_blue_tlight};
+  --ca-secondary-background: #{$semi_dark_blue_tlight};
+  --ca-red: #{$red_tlight};
+  --ca-pure-white: #{$pure_white_tligth};
+  --ca-greyish_blue_tlight: #{$greyish_blue_tlight};
 }

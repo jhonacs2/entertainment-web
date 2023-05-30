@@ -7,8 +7,7 @@ FONT SIZE SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 *!*/
 
-
-//Import Font Outfit
+@import "./assets/styles/theme";
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500&display=swap');
 
 * {
@@ -18,8 +17,47 @@ FONT SIZE SYSTEM (px)
 }
 
 html {
-  font-family: 'Outfit', sans-serif;
   font-size: 62.5%;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
   line-height: 1;
-  font-weight: 400;
+  color: var(--ca-text-color);
+  background-color: var(--ca-background);
+}
+
+.text-xl {
+  font-size: 3.2rem;
+}
+
+.text-lg {
+  font-size: 2.4rem;
+}
+
+.text-md {
+  font-size: 1.8rem;
+}
+
+.text-sm {
+  font-size: 15px;
+}
+
+.fs-6 {
+  font-weight: 500;
+}
+
+.fs-5 {
+  font-weight: 300;
+}
+
+.btn {
+  border: none;
+  border-radius: 3px;
+  padding: 1.5rem 3rem;
+  font-size: 1.5rem;
+  font-family: inherit;
+  font-weight: 300;
+  background-color: var(--ca-red);
+  color: var(--ca-text-color);
 }
