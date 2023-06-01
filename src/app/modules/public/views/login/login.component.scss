@@ -5,6 +5,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.login-icon-logo-container {
+  padding-bottom: 8rem;
 }
 
 .login-container {
@@ -13,8 +18,13 @@
   max-width: 400px;
   width: 100%;
   flex-direction: column;
-  padding: 3rem;
+  padding: 3.3rem;
   max-height: 37.3rem;
-  gap: 1.2rem;
+  gap: 2.5rem;
+  border-radius: 5%;
+}
+
+.login-sign-up {
+  color: var(--ca-red);
 }
 

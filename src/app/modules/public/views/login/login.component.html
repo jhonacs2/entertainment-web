@@ -1,10 +1,12 @@
 <section class="login-section">
-  <button>Icon</button>
-  <div class="login-container ">
-    <h2 class="text-xl fs-5">Login</h2>
-    <app-input></app-input>
-    <input type="text" placeholder="Password">
-    <button class="btn">Login to your account</button>
-    <p>Don't have a account? <span>Sign Up</span></p>
+  <div class="login-icon-logo-container">
+    <span class="icon-logo text-xl"></span>
   </div>
+  <form class="login-container">
+    <h2 class="text-xl fs-5">Login</h2>
+    <app-input id="email" label="Email Address" placeholder="Email Address"></app-input>
+    <app-input id="password" label="Password" placeholder="Password"></app-input>
+    <button class="btn" (click)="onLogin()">Login to your account</button>
+    <p class="text-sm fs-5 text-center">Don't have a account? <span class="login-sign-up">Sign Up</span></p>
+  </form>
 </section>
