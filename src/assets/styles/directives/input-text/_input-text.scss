@@ -10,38 +10,32 @@
   outline: 0;
   font-size: 1.5rem;
   color: var(--ca-text-color);
-  padding: 2rem 2rem;
   background: transparent;
   transition: border-color 0.2s;
   caret-color: var(--ca-red);
   letter-spacing: 1px;
 
-  &::placeholder {
-    color: transparent;
-  }
-
   &:placeholder-shown ~ .form_label {
     font-size: 1.5rem;
     cursor: text;
-    top: 20px;
-    padding: 0 2rem;
+    padding: 2rem 2rem;
   }
 
   &:focus {
+    color: var(--ca-pure-white);
+
     ~ .form_label {
-      position: absolute;
-      top: 0;
       display: block;
       transition: 0.2s;
       font-size: 1rem;
-      color: red;
+      color: var(--ca-pure-white);
       font-weight: 500;
     }
 
     padding-bottom: 2rem;
     font-weight: 300;
     border-width: 3px;
-    border-color: var(--ca-red);
+    border-color: var(--ca-pure-white);
     border-image-slice: 1;
   }
 
@@ -51,11 +45,9 @@
 }
 
 .form_label {
-  position: absolute;
-  top: 0;
   display: block;
   transition: 0.2s;
-  font-size: 1rem;
-  padding: 0 2rem;
+  padding: 2rem 2rem;
   color: var(--ca-greyish_blue_tlight);
 }
+
