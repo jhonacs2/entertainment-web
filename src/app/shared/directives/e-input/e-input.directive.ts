@@ -21,7 +21,7 @@ export class EInputDirective implements AfterViewInit {
     this.updateElement();
   }
 
-  private updateElement(): void {
+  public updateElement(): void {
     console.log(this.el.nativeElement.value);
   }
 }

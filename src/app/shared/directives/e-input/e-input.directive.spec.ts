@@ -1,8 +1,12 @@
-import { EInputDirective } from './e-input.directive';
+import {EInputDirective} from './e-input.directive';
+import {ChangeDetectorRef, ElementRef} from '@angular/core';
 
 describe('EInputDirective', () => {
-  xit('should create an instance', () => {
-    // const directive = new EInputDirective();
-    // expect(directive).toBeTruthy();
+  it('should create an instance', () => {
+    const mockElementRef = {} as ElementRef;
+    const mockChangeDetectorRef = {} as ChangeDetectorRef;
+    const directive = new EInputDirective(mockElementRef, mockChangeDetectorRef);
+
+    expect(directive).toBeTruthy();
   });
 });

@@ -11,8 +11,8 @@ import {EInputDirective} from '../../shared/directives/e-input/e-input.directive
     LoginComponent
   ],
   imports: [
-    PublicRoutesModule,
     CommonModule,
+    PublicRoutesModule,
     ReactiveFormsModule,
     EInputDirective
   ]
