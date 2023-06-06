@@ -7,7 +7,7 @@ import {FormBuilder, Validators} from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  submitted: boolean = false;
+  isSubmitted: boolean = false;
   loginForm = this._formBuilder.group({
     email: ['', [Validators.email, Validators.required]],
     password: ['', [Validators.required]]
@@ -17,7 +17,6 @@ export class LoginComponent {
   }
 
   public onLogin(): void {
-    console.log(this.loginForm.status);
-    this.submitted = true;
+    this.isSubmitted = true;
   }
 }

@@ -9,11 +9,11 @@
     <div class="position-relative">
       <input type="text" formControlName="email" eInputText placeholder="Email address">
       <small class="message-invalid text-sm"
-             *ngIf="((this.loginForm.get('email')?.touched! || submitted)  && this.loginForm.get('email')?.errors?.['email'])">
+             *ngIf="((this.loginForm.get('email')?.touched! || isSubmitted)  && this.loginForm.get('email')?.errors?.['email'])">
         Not a valid Email Address
       </small>
       <small class="message-invalid text-sm"
-             *ngIf="((this.loginForm.get('email')?.touched! || submitted) && this.loginForm.get('email')?.errors?.['required'])">
+             *ngIf="((this.loginForm.get('email')?.touched! || isSubmitted) && this.loginForm.get('email')?.errors?.['required'])">
         Can't be empty
       </small>
     </div>
@@ -23,7 +23,7 @@
       <!--TODO: When finish the implementation of backend we are going to use this message-->
       <!--      <small class="message-invalid text-sm">Not a valid password</small>-->
       <small class="message-invalid text-sm"
-             *ngIf="((this.loginForm.get('password')?.touched! || submitted) && this.loginForm.get('password')?.errors?.['required'])">
+             *ngIf="((this.loginForm.get('password')?.touched! || isSubmitted) && this.loginForm.get('password')?.errors?.['required'])">
         Can't be empty
       </small>
     </div>
