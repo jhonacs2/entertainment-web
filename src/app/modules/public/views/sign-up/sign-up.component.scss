@@ -1,4 +1,4 @@
-.login-section {
+.sign-up-section {
   height: 100vh;
   border: 1px solid #2d2d2d;
   display: flex;
@@ -9,31 +9,24 @@
   padding: 1rem;
 }
 
-.login-icon-logo-container {
+.sign-up-icon-logo-container {
   padding-bottom: 8rem;
 }
 
-.login-container {
+.sign-up-container {
   background-color: var(--ca-secondary-background);
   display: flex;
-  max-width: 400px;
+  max-width: 40rem;
   width: 100%;
   flex-direction: column;
   padding: 3.3rem;
-  max-height: 37.3rem;
+  max-height: 50rem;
   gap: 2.5rem;
   border-radius: 5%;
 }
 
-.login-sign-up {
+.sign-up-login {
   text-decoration: none;
   color: var(--ca-red);
 }
 
-.message-invalid {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 2.2rem;
-  color: var(--ca-red);
-}

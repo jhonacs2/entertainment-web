@@ -1,0 +1,49 @@
+<section class="sign-up-section">
+  <div class="sign-up-icon-logo-container">
+    <span class="icon-logo text-xl"></span>
+  </div>
+
+  <form class="sign-up-container" [formGroup]="signUpForm" (ngSubmit)="onSignIn()">
+    <h2 class="text-xl fs-5">Sign Up</h2>
+
+    <div class="position-relative">
+      <input type="text" formControlName="email" eInputText placeholder="Email address" autocomplete="off">
+      <!--      <small class="message-invalid text-sm"-->
+      <!--             *ngIf="((this.loginForm.get('email')?.touched! || isSubmitted)  && this.loginForm.get('email')?.errors?.['email'])">-->
+      <!--        Not a valid Email Address-->
+      <!--      </small>-->
+      <!--      <small class="message-invalid text-sm"-->
+      <!--             *ngIf="((this.loginForm.get('email')?.touched! || isSubmitted) && this.loginForm.get('email')?.errors?.['required'])">-->
+      <!--        Can't be empty-->
+      <!--      </small>-->
+    </div>
+
+    <div class="position-relative">
+      <input type="text" formControlName="password" eInputText placeholder="Password">
+      <!--      &lt;!&ndash;TODO: When finish the implementation of backend we are going to use this message&ndash;&gt;-->
+      <!--      &lt;!&ndash;      <small class="message-invalid text-sm">Not a valid password</small>&ndash;&gt;-->
+      <!--      <small class="message-invalid text-sm"-->
+      <!--             *ngIf="((this.loginForm.get('password')?.touched! || isSubmitted) && this.loginForm.get('password')?.errors?.['required'])">-->
+      <!--        Can't be empty-->
+      <!--      </small>-->
+    </div>
+
+    <div class="position-relative">
+      <input type="text" formControlName="rPassword" eInputText placeholder="Repeat password">
+      <!--      &lt;!&ndash;TODO: When finish the implementation of backend we are going to use this message&ndash;&gt;-->
+      <!--      &lt;!&ndash;      <small class="message-invalid text-sm">Not a valid password</small>&ndash;&gt;-->
+      <!--      <small class="message-invalid text-sm"-->
+      <!--             *ngIf="((this.loginForm.get('password')?.touched! || isSubmitted) && this.loginForm.get('password')?.errors?.['required'])">-->
+      <!--        Can't be empty-->
+      <!--      </small>-->
+    </div>
+
+    <button class="btn cursor-pointer text-sm" type="submit">Create an account</button>
+
+    <p class="text-sm fs-5 text-center"> Already have an account?
+      <a class="sign-up-login cursor-pointer" [routerLink]="['../login']">
+        Login
+      </a>
+    </p>
+  </form>
+</section>

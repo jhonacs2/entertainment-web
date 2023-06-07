@@ -4,11 +4,13 @@ import {LoginComponent} from './views/login/login.component';
 import {PublicRoutesModule} from './routes/public-routes.module';
 import {ReactiveFormsModule} from '@angular/forms';
 import {EInputDirective} from '../../shared/directives/e-input/e-input.directive';
+import {SignUpComponent} from './views/sign-up/sign-up.component';
 
 
 @NgModule({
   declarations: [
-    LoginComponent
+    LoginComponent,
+    SignUpComponent
   ],
   imports: [
     CommonModule,
