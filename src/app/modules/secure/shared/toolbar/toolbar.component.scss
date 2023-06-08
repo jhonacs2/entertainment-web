@@ -1,0 +1,44 @@
+.section-side-nav {
+  display: flex;
+  flex-direction: column;
+  background: var(--ca-secondary-background);
+  border-radius: 30px;
+  padding: 3.2rem;
+  height: 94vh;
+  width: 9.6rem;
+}
+
+.container-links-page {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6.4rem;
+  gap: 4.8rem;
+  align-items: center;
+}
+
+.size-main-icon-nav-bar {
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.size-icon-nav-bar {
+  font-size: 2rem;
+  cursor: pointer;
+
+  &:before {
+    transition: all 0.3s ease-in-out;
+    color: var(--ca-greyish_blue_tlight);
+  }
+
+  &:hover {
+    &:before {
+      color: var(--ca-red);
+    }
+  }
+}
+
+.active-route {
+  &:before {
+    color: var(--ca-pure-white);
+  }
+}
