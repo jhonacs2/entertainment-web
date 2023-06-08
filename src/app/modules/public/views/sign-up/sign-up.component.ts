@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-sign-up',
@@ -9,10 +9,10 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 export class SignUpComponent implements OnInit {
   isSubmitted: boolean = false;
   signUpForm = this._formBuilder.group({
-    email: [],
-    password: [],
-    rPassword: []
-  }, {validators: this.checkIfMatchingPasswords('password', 'rPassword')});
+    email: ['', [Validators.email, Validators.required]],
+    password: ['', [Validators.required]],
+    rpassword: ['', [Validators.required]]
+  }, {validators: this.checkIfMatchingPasswords('password', 'rpassword')});
 
   constructor(private _formBuilder: FormBuilder) {
   }
@@ -22,7 +22,6 @@ export class SignUpComponent implements OnInit {
 
   public onSignIn(): void {
     this.isSubmitted = true;
-    console.log(this.signUpForm);
   }
 
   private checkIfMatchingPasswords(password: string, rPassword: string) {
@@ -30,7 +29,10 @@ export class SignUpComponent implements OnInit {
       const passwordInput = group.controls[password];
       const passwordConfirm = group.controls[rPassword];
       const passwordMatch = passwordInput.value !== passwordConfirm.value;
-      return passwordConfirm.setErrors(passwordMatch ? null : {notEquivalent: true});
+      return passwordConfirm.setErrors(passwordMatch ? {
+        ...passwordConfirm.errors,
+        notEquivalent: true
+      } : passwordConfirm.errors);
     };
   }
 }

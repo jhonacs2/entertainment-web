@@ -8,34 +8,39 @@
 
     <div class="position-relative">
       <input type="text" formControlName="email" eInputText placeholder="Email address" autocomplete="off">
-      <!--      <small class="message-invalid text-sm"-->
-      <!--             *ngIf="((this.loginForm.get('email')?.touched! || isSubmitted)  && this.loginForm.get('email')?.errors?.['email'])">-->
-      <!--        Not a valid Email Address-->
-      <!--      </small>-->
-      <!--      <small class="message-invalid text-sm"-->
-      <!--             *ngIf="((this.loginForm.get('email')?.touched! || isSubmitted) && this.loginForm.get('email')?.errors?.['required'])">-->
-      <!--        Can't be empty-->
-      <!--      </small>-->
+      <small class="message-invalid text-sm"
+             *ngIf="((this.signUpForm.get('email')?.touched! || isSubmitted)  && this.signUpForm.get('email')?.errors?.['email'])">
+        Not a valid Email Address
+      </small>
+      <small class="message-invalid text-sm"
+             *ngIf="((this.signUpForm.get('email')?.touched! || isSubmitted) && this.signUpForm.get('email')?.errors?.['required'])">
+        Can't be empty
+      </small>
     </div>
 
     <div class="position-relative">
       <input type="text" formControlName="password" eInputText placeholder="Password">
-      <!--      &lt;!&ndash;TODO: When finish the implementation of backend we are going to use this message&ndash;&gt;-->
-      <!--      &lt;!&ndash;      <small class="message-invalid text-sm">Not a valid password</small>&ndash;&gt;-->
-      <!--      <small class="message-invalid text-sm"-->
-      <!--             *ngIf="((this.loginForm.get('password')?.touched! || isSubmitted) && this.loginForm.get('password')?.errors?.['required'])">-->
-      <!--        Can't be empty-->
-      <!--      </small>-->
+      <small class="message-invalid text-sm"
+             *ngIf="((this.signUpForm.get('password')?.touched! || isSubmitted) && this.signUpForm.get('password')?.errors?.['required'])">
+        Can't be empty
+      </small>
     </div>
 
     <div class="position-relative">
-      <input type="text" formControlName="rPassword" eInputText placeholder="Repeat password">
-      <!--      &lt;!&ndash;TODO: When finish the implementation of backend we are going to use this message&ndash;&gt;-->
-      <!--      &lt;!&ndash;      <small class="message-invalid text-sm">Not a valid password</small>&ndash;&gt;-->
-      <!--      <small class="message-invalid text-sm"-->
-      <!--             *ngIf="((this.loginForm.get('password')?.touched! || isSubmitted) && this.loginForm.get('password')?.errors?.['required'])">-->
-      <!--        Can't be empty-->
-      <!--      </small>-->
+      <input type="text" formControlName="rpassword" eInputText placeholder="Repeat password">
+
+      <small class="message-invalid text-sm"
+             *ngIf="((this.signUpForm.get('rpassword')?.touched! || isSubmitted)
+             && this.signUpForm.get('rpassword')?.errors?.['required'])
+             && !this.signUpForm.get('rpassword')?.errors?.['notEquivalent']">
+        Can't be empty
+      </small>
+
+      <small class="message-invalid text-sm"
+             *ngIf="((this.signUpForm.get('rpassword')?.touched! || isSubmitted)
+             && this.signUpForm.get('rpassword')?.errors?.['notEquivalent'])">
+        Password do not match
+      </small>
     </div>
 
     <button class="btn cursor-pointer text-sm" type="submit">Create an account</button>
