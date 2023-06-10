@@ -1,4 +1,4 @@
-import {AfterViewInit, ChangeDetectorRef, Directive, ElementRef, HostListener, Optional} from '@angular/core';
+import {AfterViewInit, ChangeDetectorRef, Directive, ElementRef, HostListener, Input, Optional} from '@angular/core';
 import {NgModel} from '@angular/forms';
 
 @Directive({
@@ -6,11 +6,14 @@ import {NgModel} from '@angular/forms';
   standalone: true,
   host: {
     class: 'input-container form_input form_label ',
-    '[class.input-filled]': 'inputFilled'
+    '[class.input-filled]': 'inputFilled',
+    '[class.input-border-bottom]': 'isActiveBorderBottom'
   }
 })
 export class EInputDirective implements AfterViewInit {
-  inputFilled: boolean = false;
+  @Input() public isActiveBorderBottom = true;
+
+  inputFilled: boolean = true;
 
   @HostListener('input', ['$event'])
   onInput(): void {

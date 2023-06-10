@@ -1,1 +1,20 @@
-<p>home-view works!</p>
+<section class="section-home container">
+  <section class="section-search">
+    <div class="container-input-search">
+      <span class="icon-search text-xl"></span>
+      <input type="text" eInputText placeholder="Search For movies or TV Series" [isActiveBorderBottom]="false"
+             class="text-lg">
+    </div>
+  </section>
+
+  <section class="section-trending mt-7">
+    <h2 class="text-xl fs-5 mb-7">Trending</h2>
+    <section class="section-trending-carousel">
+      <app-carousel></app-carousel>
+    </section>
+  </section>
+
+  <section class="section-for-you mt-7">
+    <h2 class="text-xl fs-5">Recommended for you</h2>
+  </section>
+</section>

@@ -6,7 +6,6 @@
   width: 100%;
   font-family: inherit;
   border: 0;
-  border-bottom: 2px solid var(--ca-greyish_blue_tlight);
   outline: 0;
   font-size: 1.5rem;
   color: var(--ca-text-color);
@@ -14,6 +13,10 @@
   transition: border-color 0.2s;
   caret-color: var(--ca-red);
   letter-spacing: 1px;
+
+  &.input-border-bottom {
+    border-bottom: 2px solid var(--ca-greyish_blue_tlight);
+  }
 
   &:placeholder-shown ~ .form_label {
     font-size: 1.5rem;
