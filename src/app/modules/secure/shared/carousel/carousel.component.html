@@ -1,28 +1,8 @@
 <section class="section-carousel">
-  <div class="swiper mySwiper" #carousel>
+  <div class="swiper" #carousel>
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <app-card></app-card>
-      </div>
-
-      <div class="swiper-slide">
-        <app-card></app-card>
-      </div>
-
-      <div class="swiper-slide">
-        <app-card></app-card>
-      </div>
-
-      <div class="swiper-slide">
-        <app-card></app-card>
-      </div>
-
-      <div class="swiper-slide">
-        <app-card></app-card>
-      </div>
-
-      <div class="swiper-slide">
-        <app-card></app-card>
+      <div class="swiper-slide" *ngFor="let movie of (trendingMovies | async)">
+        <app-card [movieDetails]="movie"></app-card>
       </div>
     </div>
   </div>

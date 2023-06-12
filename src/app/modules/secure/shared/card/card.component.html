@@ -1,17 +1,20 @@
 <div class="container-card">
-  <img src="/assets/thumbnails/beyond-earth/regular/large.jpg" alt="" class="container-img">
+  <img [src]="movieDetails.thumbnail.trending?.large"
+       alt="thumbnail of {{movieDetails.title}}"
+       class="container-img">
 
   <button class="button-icon-bookmark">
-    <img ngSrc="/assets/icons/icon-bookmark-empty.svg" alt="" height="14" width="12">
+    <span class="icon-bookmark-full"></span>
+<!--    <img ngSrc="/assets/icons/icon-bookmark-empty.svg" alt="" height="14" width="12">-->
   </button>
 
   <div class="container-all-details">
     <p class="container-dates text-sm fs-5">
-      <span>2023</span>
+      <span>{{movieDetails.year}}</span>
       &bullet;
-      <span>Movie</span>
+      <span>{{movieDetails.category}}</span>
       &bullet;
-      <span>PG</span></p>
-    <p class="text-lg">Beyond Earth</p>
+      <span>{{movieDetails.rating}}</span></p>
+    <p class="text-lg">{{movieDetails.title}}</p>
   </div>
 </div>

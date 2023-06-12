@@ -1,6 +1,8 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SecureMainViewComponent } from './secure-main-view.component';
+import {SecureMainViewComponent} from './secure-main-view.component';
+import {ToolbarComponent} from '../../shared/toolbar/toolbar.component';
+import {RouterTestingModule} from '@angular/router/testing';
 
 describe('SecureMainViewComponent', () => {
   let component: SecureMainViewComponent;
@@ -8,9 +10,10 @@ describe('SecureMainViewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SecureMainViewComponent ]
+      declarations: [SecureMainViewComponent, ToolbarComponent],
+      imports: [RouterTestingModule]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(SecureMainViewComponent);
     component = fixture.componentInstance;

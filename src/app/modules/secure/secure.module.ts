@@ -6,8 +6,9 @@ import {SecureRoutesModule} from './routes/secure-routes.module';
 import {ToolbarComponent} from './shared/toolbar/toolbar.component';
 import {MovieViewComponent} from './views/movie-view/movie-view.component';
 import {EInputDirective} from '../../shared/directives/e-input/e-input.directive';
-import { CardComponent } from './shared/card/card.component';
-import { CarouselComponent } from './shared/carousel/carousel.component';
+import {CardComponent} from './shared/card/card.component';
+import {CarouselComponent} from './shared/carousel/carousel.component';
+import {MovieService} from './services/movie.service';
 
 
 @NgModule({
@@ -19,12 +20,13 @@ import { CarouselComponent } from './shared/carousel/carousel.component';
     CardComponent,
     CarouselComponent
   ],
-    imports: [
-        CommonModule,
-        SecureRoutesModule,
-        EInputDirective,
-        NgOptimizedImage
-    ]
+  imports: [
+    CommonModule,
+    NgOptimizedImage,
+    EInputDirective,
+    SecureRoutesModule
+  ],
+  providers: [MovieService]
 })
 export class SecureModule {
 }
