@@ -15,6 +15,11 @@
   </section>
 
   <section class="section-for-you mt-7">
-    <h2 class="text-xl fs-5">Recommended for you</h2>
+    <h2 class="text-xl fs-5 mb-7">Recommended for you</h2>
+    <section style="display: grid;grid-template-columns: repeat(4,1fr);gap: 4rem;width: 93%">
+      <div *ngFor="let movie of (allMovies$ | async)" style="width: 100%">
+        <app-common-card [movieDetails]="movie"></app-common-card>
+      </div>
+    </section>
   </section>
 </section>

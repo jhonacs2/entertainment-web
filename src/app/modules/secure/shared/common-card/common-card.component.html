@@ -1,0 +1,20 @@
+<div class="container-card">
+  <div class="container-card-img">
+    <img [src]="movieDetails.thumbnail.regular.medium"
+         alt="thumbnail of {{movieDetails.title}}"
+         class="container-img">
+
+    <button class="button-icon-bookmark">
+      <span class="icon-bookmark-full"></span>
+    </button>
+  </div>
+  <div class="container-all-details mt-5">
+    <p class="container-dates text-sm fs-5">
+      <span>{{movieDetails.year}}</span>
+      &bullet;
+      <span>{{movieDetails.category}}</span>
+      &bullet;
+      <span>{{movieDetails.rating}}</span></p>
+    <p class="text-lg">{{movieDetails.title}}</p>
+  </div>
+</div>

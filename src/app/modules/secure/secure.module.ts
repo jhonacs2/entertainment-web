@@ -9,6 +9,7 @@ import {EInputDirective} from '../../shared/directives/e-input/e-input.directive
 import {CardComponent} from './shared/card/card.component';
 import {CarouselComponent} from './shared/carousel/carousel.component';
 import {MovieService} from './services/movie.service';
+import { CommonCardComponent } from './shared/common-card/common-card.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import {MovieService} from './services/movie.service';
     ToolbarComponent,
     MovieViewComponent,
     CardComponent,
-    CarouselComponent
+    CarouselComponent,
+    CommonCardComponent
   ],
   imports: [
     CommonModule,

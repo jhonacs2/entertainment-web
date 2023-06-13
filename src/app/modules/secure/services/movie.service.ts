@@ -15,4 +15,8 @@ export class MovieService {
     return this._httpClient.get<MovieDetails[]>('/assets/data/data.json')
       .pipe(map(value => value.filter(value => value.isTrending)));
   }
+
+  public getAllMovie(): Observable<MovieDetails[]> {
+    return this._httpClient.get<MovieDetails[]>('/assets/data/data.json');
+  }
 }
